@@ -6,6 +6,8 @@ const forecast = require("./utils/forecast.js");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const pathFile = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const hbsPath = path.join(__dirname, "../templates/partials");
@@ -47,7 +49,7 @@ app.get("/weather", (req, res) => {
   const address = req.query.address;
 
   const location = req.query.location;
-  geocode(address, (error, { latitude, longtitude, location } ={}) => {
+  geocode(address, (error, { latitude, longtitude, location } = {}) => {
     if (error) {
       return res.send({
         error,
@@ -90,6 +92,6 @@ app.get("/product", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Filloj kodi");
 });

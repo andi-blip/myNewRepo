@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   paragrafi3.innerText = "";
 
   const value = input.value;
-  fetch("http://localhost:3000/weather?address=" + value).then((response) => {
+  fetch("/weather?address=" + value).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         console.log("error fafsd");
