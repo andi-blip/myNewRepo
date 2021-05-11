@@ -1,3 +1,4 @@
+console.log("new comment");
 const input = document.querySelector("#text");
 const form = document.querySelector("form");
 const paragrafi1 = document.getElementById("p1");
