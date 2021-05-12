@@ -14,9 +14,9 @@ const forecast = (latitude, longtidude, callback) => {
       callback("Coudn't find the data in lant and long", undefined);
     } else {
       callback(undefined, {
-        degree: response.body.current.wind_degree,
-        weather: response.body.current.weather_descriptions[0],
-        cloud: response.body.current.cloudcover,
+        degree: response.body.current.wind_degree + " degree",
+        weather: response.body.current.weather_descriptions[0] + " weather",
+        cloud: response.body.current.cloudcover + " cloud",
       });
     }
   });
