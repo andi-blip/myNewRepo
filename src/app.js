@@ -93,5 +93,5 @@ app.get("/product", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Filloj kodi");
+  console.log("Filloj kodi " + port);
 });
